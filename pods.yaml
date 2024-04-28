@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custbank-api
+spec:
+  selector:
+    matchLabels:
+      custapilabel: custbank-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        custapilabel: custbank-api
+    spec:
+      containers:
+      - name: custbank-api
+        image: docker.io/jinoinfo/kube-repository:customerbank

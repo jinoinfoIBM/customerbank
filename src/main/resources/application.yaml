@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: customerbank
+server:
+  address: 0.0.0.0
